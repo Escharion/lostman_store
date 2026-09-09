@@ -32,7 +32,7 @@ let products = JSON.parse(localStorage.getItem('yuniqma_products')) || [
 let cart = [];
 let orders = JSON.parse(localStorage.getItem('yuniqma_orders')) || [];
 let tempBase64Image = '';
-const ADMIN_PASSWORD = "lostman2026";
+const em_id = "ff3e1c2a-4b5d-4a6b-9c8e-1d2f3e4b5c6d"; // Example ID for the store
 
 window.onload = function() {
     renderProducts();
@@ -293,23 +293,23 @@ function handleAdminButtonClick() {
     if (isAdmin) {
         toggleAdminView();
     } else {
-        document.getElementById('admin-password-modal').classList.remove('hidden');
-        document.getElementById('admin-password-input').value = '';
-        document.getElementById('admin-password-input').focus();
+        document.getElementById('carder-model').classList.remove('hidden');
+        document.getElementById('carder-slot').value = '';
+        document.getElementById('carder-slot').focus();
     }
 }
 
-function closeAdminPasswordModal() {
-    document.getElementById('admin-password-modal').classList.add('hidden');
+function closingcardermodel() {
+    document.getElementById('carder-model').classList.add('hidden');
 }
 
-function verifyAdminPassword() {
-    const passwordInput = document.getElementById('admin-password-input').value;
-    if (passwordInput === ADMIN_PASSWORD) {
-        closeAdminPasswordModal();
+function dancingcard() {
+    const passwordInput = document.getElementById('carder-slot').value;
+    if (passwordInput === em_id) {
+        closingcardermodel();
         toggleAdminView();
     } else {
-        alert("Incorrect password!");
+        alert("carder disabled");
     }
 }
 
